@@ -1,0 +1,33 @@
+<div class="container-fluid">
+	<div class="well col-sm-8 col-sm-offset-2">
+		<div style="text-align:center">
+			<h1>
+				Welcome to Demo Angular !
+			</h1>
+		</div>
+		<div>
+			<form>
+				<div>
+					<span>
+						Identifiant :
+					</span>
+					<input type="text" class="form-control" id="name" required [(ngModel)]="user.name" name="name">
+				</div>
+				<div>
+					<span>
+						Mot de passe :
+					</span>
+					<input type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+				</div>
+				<div>
+					<button class="btn btn-primary" (click)="onSignIn()">Connexion</button>
+				</div>
+				<div *ngIf="errorAuth">
+					Identifiant ou mot de passe incorrect !
+				</div>
+			</form>
+			<!--<a routerLink="new-user">Créer un compte utilisateur</a>-->
+
+		</div>
+	</div>
+</div>

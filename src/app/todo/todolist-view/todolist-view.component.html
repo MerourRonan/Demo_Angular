@@ -1,0 +1,12 @@
+<div class="col-sm-3 col-md-2 sidebar">
+
+    <button class="btn btn-primary btn-block" (click)="openDialogCreateTodo()">
+        <div class="row">
+            <div class="col-sm-2"><span class="glyphicon glyphicon-plus"></span></div>
+            <div class="col-sm-8">Create Todo-List</div>
+        </div>
+    </button>
+    <ul class="list-group checked-list-box">
+        <app-todolist-element *ngFor="let currentList of todoList; let i = index" [todoList]="currentList" [index]="i"></app-todolist-element>
+    </ul>
+</div>

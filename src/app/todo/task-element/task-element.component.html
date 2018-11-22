@@ -1,0 +1,14 @@
+<li class="list-group-item">
+	<div class="row">
+		<div class="col-sm-1">
+			<input type="checkbox" id="isDone" name="isDone" [(ngModel)]="task.isDone" (click)="doneTask()">
+		</div>
+		<div class="col-sm-10">
+			<span class="text-left">{{task.name}}</span>
+		</div>
+		<div class="col-sm-1">
+			<button class="btn btn-primary" (click)="openDialogModifyTask()"><span class="glyphicon glyphicon-pencil"></span></button>
+			<button class="btn btn-basic" (click)="deleteTask()"><span class="glyphicon glyphicon-trash"></span></button>
+		</div>
+	</div>
+</li>

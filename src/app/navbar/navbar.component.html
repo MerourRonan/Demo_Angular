@@ -1,0 +1,20 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" *ngIf="isAuth">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand">DEMO Angular</span>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li routerLinkActive="active"><a id="routerLinkTodo" routerLink="todo-view">To-Do</a></li>
+        <li routerLinkActive="active"><a id="routerLinkMessage" routerLink="message-view">Messages</a></li>
+      </ul>
+      <div class="nav navbar-nav navbar-right">
+          <img src={{connectedUser.userPicture}} class="img-thumbnail userImage">
+          <span class="userName">{{connectedUser.name}}</span>
+          <a id="logoutLink" class="userName" (click)="onLogout()" > (Déconnexion)</a>
+        </div>
+    </div>
+    
+  </div>
+</nav>

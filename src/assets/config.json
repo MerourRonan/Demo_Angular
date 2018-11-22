@@ -1,0 +1,6 @@
+{
+    "backEndServer":"http://localhost:8080/",
+    "authUrl": "api/auth/",
+    "userTodosUrl": "api/user{userId}/allTodos/",
+    "updateTodoUrl": "api/updateTodo/"
+  }

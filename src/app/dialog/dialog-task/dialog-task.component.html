@@ -1,0 +1,15 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-Header">
+        <b>Task</b>
+      </div>
+      <div class="modal-body">
+        <input class="form-control" [(ngModel)]="taskModel.name" placeholder="New Task">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" (click)="close()">Annuler</button>
+        <button *ngIf="!isUpdate" class="btn btn-default" (click)="createTask()">Créer</button>
+        <button *ngIf="isUpdate" class="btn btn-default" (click)="updateTask()">Modifier</button>
+      </div>
+    </div>
+  </div>

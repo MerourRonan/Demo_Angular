@@ -1,0 +1,15 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-Header">
+      <b>Todo List</b>
+    </div>
+    <div class="modal-body">
+      <input class="form-control" [(ngModel)]="todoModel.name" placeholder="New Todo-List">
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-default" (click)="close()">Annuler</button>
+      <button *ngIf="!isUpdate" class="btn btn-default" (click)="createTodo()">Créer</button>
+      <button *ngIf="isUpdate" class="btn btn-default" (click)="updateTodo()">Modifier</button>
+    </div>
+  </div>
+</div>
